@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Adivina el Pokémon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Adivina el Pokémon</h1>
+  <p>Día: <span id="dayLabel"></span></p>
+
+  <div id="gameModes">
+    <button class="mode" onclick="startGame('classic')">Clásico</button>
+    <button class="mode" onclick="startGame('timeAttack')">Modo Rápido (2 min)</button>
+    <button class="mode" onclick="startGame('free')">Modo Libre</button>
+  </div>
+
+  <img id="pokemonImg" src="" alt="Silueta Pokémon">
+  <div>
+    <input type="text" id="guessInput" placeholder="Escribe el nombre..." list="pokemonList">
+    <datalist id="pokemonList"></datalist>
+    <button onclick="checkGuess()">Adivinar</button>
+  </div>
+
+  <p id="result"></p>
+  <p id="statusText">Racha actual: <span id="streak">0</span></p>
+  <p id="timer"></p>
+
+  <script src="main.js"></script>
+</body>
+</html>
